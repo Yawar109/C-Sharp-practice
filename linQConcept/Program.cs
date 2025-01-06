@@ -18,7 +18,6 @@ namespace linQConcept
             new person { id = 003, name = "kashaf", salary = 89000 }
             };
             var salary = employee.Where(i => i.salary > 80000).ToList();    
-            //IEnumerable<TempFileCollection.>
 
 
             salary.ForEach(emp => Console.WriteLine($"Id: {emp.id}, Name: {emp.name}, Salary: {emp.salary}"));

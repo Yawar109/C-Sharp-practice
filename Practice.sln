@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "learningDebugging", "learni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging\Debugging.csproj", "{48EE2FDC-98A1-4627-A9DA-92C3A6FDC646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loopsPrac", "loopsPrac\loopsPrac.csproj", "{3C87457A-F677-4480-B13C-8FE136E8574B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqJoins", "loopsPrac\LinqJoins.csproj", "{3C87457A-F677-4480-B13C-8FE136E8574B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,49 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Factorial_by_recursion
+namespace linQConcept
 {
     internal class Program
     {
         static void Main()
         {
-            Console.Write("Enter the height: ");
-            int height = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 1; i <= height; i++)
+            List<person> employee = new List<person>
             {
-                for (int j = 1; j <= height - i; j++)
-                {
-                    Console.Write("");
-                }
+                new person { id = 001, name = "Ali", salary = 45000, DepartmentId = 1 },
+                new person { id = 002, name = "Jaffar", salary = 98000, DepartmentId = 2 },
+                new person { id = 003, name = "Kashaf", salary = 89000, DepartmentId = 1 }
+            };
 
-                for (int k = 1; k <= (2 * i - 1); k++)
-                {
-                    Console.Write("*");
-                }
-
-                Console.WriteLine();
-            }
-
-            for (int i = height - 1 ; i >= 1; i--)
+            List<department> departments = new List<department>
             {
-               
+                new department { DepartmentId = 1, DepartmentName = "IT" },
+                new department { DepartmentId = 2, DepartmentName = "HR" }
+            };
 
-                for (int k = 1; k <= (2 * i - 1); k++)
+            var employeeWithDepartment = employee.Join(
+                departments,
+                emp => emp.DepartmentId,    
+                dept => dept.DepartmentId,  
+                (emp, dept) => new          
                 {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-                for (int j = 1; j <= height - i; j++)
-                {
-                    Console.Write("");
-                }
+                    emp.id,
+                    emp.name,
+                    emp.salary,
+                    dept.DepartmentName
+                });
 
-                Console.WriteLine();
-            }
+            //foreach (var emp in employeeWithDepartment)
+            //{
+            //    Console.WriteLine($"Id: {emp.id}, Name: {emp.name}, Salary: {emp.salary}, Department: {emp.DepartmentName}");
+            //}
+            employeeWithDepartment.ToList().ForEach(emp => Console.WriteLine($"Id: {emp.id}, Name: {emp.name}, Salary: {emp.salary},  Department: {emp.DepartmentName}"));
         }
+    }
+
+    class person
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int salary { get; set; }
+        public int DepartmentId { get; set; } 
+    }
+
+    class department
+    {
+        public int DepartmentId { get; set; }
+        public string DepartmentName { get; set; }
     }
 }
