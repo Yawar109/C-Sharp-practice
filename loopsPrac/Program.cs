@@ -17,7 +17,7 @@ namespace Factorial_by_recursion
             {
                 for (int j = 1; j <= height - i; j++)
                 {
-                    Console.Write(" ");
+                    Console.Write("");
                 }
 
                 for (int k = 1; k <= (2 * i - 1); k++)
@@ -28,32 +28,21 @@ namespace Factorial_by_recursion
                 Console.WriteLine();
             }
 
-            //for (int i = height; i >= 1; i--)
-            //{
-            //    for (int j = 1; j <= height - i; j++)
-            //    {
-            //        Console.Write(" ");
-            //    }
-
-            //    for (int k = 1; k <= (2 * i - 1); k++)
-            //    {
-            //        Console.Write("*");
-            //    }
-
-            //    Console.WriteLine();
-            //}
-            for (int i = height; i > 0; i--)
+            for (int i = height - 1 ; i >= 1; i--)
             {
-                // Print spaces
-                Console.Write(2 + height);
+               
 
-                // Print numbers
-                for (int j = 1; j <= i; j++)
+                for (int k = 1; k <= (2 * i - 1); k++)
                 {
                     Console.Write("*");
                 }
+                Console.WriteLine();
+                for (int j = 1; j <= height - i; j++)
+                {
+                    Console.Write("");
+                }
 
-                Console.WriteLine("*");
+                Console.WriteLine();
             }
         }
     }
