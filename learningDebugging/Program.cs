@@ -10,7 +10,7 @@ namespace learningDebugging
     {
         static void Main()
         {
-            char[] letters = { 'y', 'a', 'w', 'a', 'r', ' ', 'a', 'b', 'b', 'a', 's' };
+            char[] letters = { 'S', 't', 'r', 'e', 'a', 'k' };
             string name = "";
             int[] a = new int[11];
             for (int i = 0; i < letters.Length; i++)
@@ -24,7 +24,7 @@ namespace learningDebugging
 
         static void SendMessage(string name, int msg)
         {
-            Console.WriteLine("Hello, " + name + "! Count to " + msg);
+            Console.WriteLine("Have, " + name + "? Count to " + msg);
         }
     }
 }

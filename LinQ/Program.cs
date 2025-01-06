@@ -55,7 +55,7 @@ namespace LinQ
 
             var students = Result.Where(i => i.CourseName == "Natural Language Processing" ).ToList();
 
-            students.ForEach(x => Console.WriteLine($"StudentID: {x.StudentID}, StudentName: {x.StudentName}, CourseName: {x.CourseName}, Date: {x.}"));
+            students.ForEach(x => Console.WriteLine($"StudentID: {x.StudentID}, StudentName: {x.StudentName}, CourseName: {x.CourseName}, Date: {x.EnrollmentDate}"));
 
 
         }
